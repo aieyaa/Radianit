@@ -17,6 +17,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from rest_framework import routers
+from django.http import HttpResponse
 from valorant.views import (
     AgentViewSet, CapaciteViewSet, ArmeViewSet,
     CarteViewSet, 
@@ -31,4 +32,5 @@ router.register('cartes', CarteViewSet)
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include(router.urls)),
+    path('', lambda request: HttpResponse("Welcome to the Valorant API!")),
 ]
