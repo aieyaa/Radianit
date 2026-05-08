@@ -1,13 +1,18 @@
-from django.shortcuts import render
-from rest_framework.decorators import api_view
-from rest_framework.response import Response
+from rest_framework import generics
+from .models import Arme, Agent
+from .serializers import ArmeSerializer, AgentSerializer
 
-@api_view(['GET'])
-def get_agents(request):
-    agents = [
-        {"id": 1, "name": "Jett", "role": "Duelist", "country": "South Korea"},
-        {"id": 2, "name": "Phoenix", "role": "Duelist", "country": "United Kingdom"},
-        {"id": 3, "name": "Sage", "role": "Sentinel", "country": "China"},
-        {"id": 4, "name": "Sova", "role": "Initiator", "country": "Russia"},
-    ]
-    return Response(agents)
+
+# ──────────────── Agents ────────────────
+
+class AgentListAPIView(generics.ListAPIView):
+    queryset = Agent.objects.all()
+    serializer_class = AgentSerializer
+
+
+# ──────────────── Armes ────────────────
+
+class ArmeListAPIView(generics.ListAPIView):
+    queryset = Arme.objects.all()
+    serializer_class = ArmeSerializer
+

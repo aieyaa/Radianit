@@ -37,11 +37,11 @@ function App() {
           </p>
         </section>
 
-        <section className="grid" style={{ 
-          display: 'grid', 
-          gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', 
-          gap: '2rem', 
-          paddingBottom: '4rem' 
+        <section className="grid" style={{
+          display: 'grid',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
+          gap: '2rem',
+          paddingBottom: '4rem'
         }}>
           {agents.map(agent => (
             <div key={agent.id} className="glass-card fade-in" style={{ textAlign: 'left' }}>

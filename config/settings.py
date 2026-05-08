@@ -123,3 +123,20 @@ STATIC_URL = 'static/'
 
 # CORS Settings
 CORS_ALLOW_ALL_ORIGINS = True
+
+# REST Framework Settings
+REST_FRAMEWORK = {
+    'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
+}
+
+# Spectacular Settings
+SPECTACULAR_SETTINGS = {
+    'TITLE': 'Radianit API',
+    'DESCRIPTION': 'API pour le projet Valorant Radianit',
+    'VERSION': '1.0.0',
+    'SERVE_INCLUDE_SCHEMA': False,
+}
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = BASE_DIR / 'media'
+
