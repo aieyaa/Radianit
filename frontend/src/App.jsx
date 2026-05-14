@@ -23,12 +23,12 @@ function App() {
 
     fetch('/api/maps/')
       .then(res => res.json())
-      .then(data => setCartes(data))
+      .then(data => setMaps(data))
       .catch(err => console.error("Erreur lors de la récupération des cartes:", err))
 
     fetch('/api/powers/')
       .then(res => res.json())
-      .then(data => setPouvoirs(data))
+      .then(data => setPowers(data))
       .catch(err => console.error("Erreur lors de la récupération des pouvoirs:", err))
   }, [])
 
@@ -197,11 +197,11 @@ function App() {
                   textTransform: 'uppercase'
                 }}
               >
-                {maps.name}
+                {carte.name}
               </h3>
 
               <p style={{ opacity: 0.7 }}>
-                {maps.description}
+                {carte.description}
               </p>
             </div>
           ))}
@@ -225,11 +225,11 @@ function App() {
                   textTransform: 'uppercase'
                 }}
               >
-                {powers.name}
+                {power.name}
               </h3>
 
               <p style={{ opacity: 0.7 }}>
-                {powers.description}
+                {power.description}
               </p>
             </div>
           ))}

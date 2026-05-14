@@ -10,6 +10,8 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('agents/', views.AgentListAPIView.as_view()),
     path('armes/', views.ArmeListAPIView.as_view()),
+    path('maps/', views.MapListAPIView.as_view()),
+    path('powers/', views.PowerListAPIView.as_view()),
 ]
 
 if settings.DEBUG:
