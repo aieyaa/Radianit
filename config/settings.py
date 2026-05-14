@@ -27,7 +27,10 @@ SECRET_KEY = os.environ.get('SECRET_KEY', 'django-insecure-(%ke5+bggz6=60_+8gfp%
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get('DEBUG', 'False') == 'False'
 
-ALLOWED_HOSTS = ['*'] # En production, remplacez '*' par votre domaine Render
+ALLOWED_HOSTS = ['*'] 
+
+# Autoriser Render pour les formulaires (Admin)
+CSRF_TRUSTED_ORIGINS = ['https://*.onrender.com']
 
 
 # Application definition
