@@ -2,7 +2,7 @@
   "rewrites": [
     {
       "source": "/api/:path*",
-      "destination": "https://VOTRE-BACKEND-RENDER.onrender.com/api/:path*"
+      "destination": "https://radianit.onrender.com"
     },
     {
       "source": "/(.*)",
